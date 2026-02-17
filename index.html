@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Media Hover Test – Refactored</title>
+    <title>Media Hover Test</title>
 
     <style>
       body {
@@ -14,30 +14,26 @@
         padding: 20px;
       }
 
-      /* -------------------------
-       LINK STYLING
-    --------------------------*/
       a {
-        color: #0645ad; /* accessible blue */
-        text-decoration: underline; /* default state */
+        color: #0645ad;
+        text-decoration: underline;
+        text-underline-offset: 2px;
       }
 
       a:hover {
-        text-decoration: none; /* remove underline on hover */
+        text-decoration: none;
       }
 
       a:visited {
-        color: #5a2a83; /* accessible purple */
+        color: #2f0058;
+        background-color: #ce8a0d;
       }
 
       a:active {
-        outline: 3px solid #ffbf47; /* visible active state */
+        outline: 3px solid #ce8a0d;
         outline-offset: 3px;
       }
 
-      /* -------------------------
-       BUTTON & OTHER INTERACTIVE ELEMENTS
-    --------------------------*/
       button {
         font-size: 1rem;
         padding: 10px 16px;
@@ -54,26 +50,11 @@
       }
 
       button:focus {
-        outline: 3px solid #ffbf47;
+        outline: 3px solid #000000;
         outline-offset: 3px;
       }
 
       button:active {
-        outline: 3px solid #ffbf47;
-        outline-offset: 3px;
-      }
-
-      details,
-      summary {
-        cursor: pointer;
-      }
-
-      summary:focus {
-        outline: 3px solid #ffbf47;
-        outline-offset: 3px;
-      }
-
-      summary:active {
         outline: 3px solid #ffbf47;
         outline-offset: 3px;
       }
@@ -110,7 +91,7 @@
   </head>
 
   <body>
-    <h1>Refactored Media Hover Test</h1>
+    <h1>Media Hover Test</h1>
 
     <!-- SECTION 1 ----------------------------------------------------------->
     <section>
@@ -146,31 +127,6 @@
       <button type="button" class="remove-hover-media">
         Button – No Hover on No-Hover Devices
       </button>
-    </section>
-
-    <!-- SECTION 3 ----------------------------------------------------------->
-    <section>
-      <h2>Section 3: Accordions</h2>
-
-      <p><strong>1. Simple accordion:</strong></p>
-      <details>
-        <summary>Simple Accordion</summary>
-        <p>Content for the simple accordion.</p>
-      </details>
-
-      <p><strong>2. Accordion with hover removed on small screens:</strong></p>
-      <details class="remove-hover-small">
-        <summary>Accordion – No Hover on Small Screens</summary>
-        <p>Content for this accordion.</p>
-      </details>
-
-      <p>
-        <strong>3. Accordion with hover removed for @media(hover:none):</strong>
-      </p>
-      <details class="remove-hover-media">
-        <summary>Accordion – No Hover on No-Hover Devices</summary>
-        <p>Content for this accordion.</p>
-      </details>
     </section>
   </body>
 </html>
