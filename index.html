@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Hover Test – Refactored</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background: #ffffff;
+        color: #222;
+        padding: 20px;
+      }
+
+      /* -------------------------
+       LINK STYLING
+    --------------------------*/
+      a {
+        color: #0645ad; /* accessible blue */
+        text-decoration: underline; /* default state */
+      }
+
+      a:hover {
+        text-decoration: none; /* remove underline on hover */
+      }
+
+      a:visited {
+        color: #5a2a83; /* accessible purple */
+      }
+
+      a:active {
+        outline: 3px solid #ffbf47; /* visible active state */
+        outline-offset: 3px;
+      }
+
+      /* -------------------------
+       BUTTON & OTHER INTERACTIVE ELEMENTS
+    --------------------------*/
+      button {
+        font-size: 1rem;
+        padding: 10px 16px;
+        margin: 6px 0;
+        border-radius: 4px;
+        border: 2px solid #004085;
+        background: #0069d9;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0053aa;
+      }
+
+      button:focus {
+        outline: 3px solid #ffbf47;
+        outline-offset: 3px;
+      }
+
+      button:active {
+        outline: 3px solid #ffbf47;
+        outline-offset: 3px;
+      }
+
+      details,
+      summary {
+        cursor: pointer;
+      }
+
+      summary:focus {
+        outline: 3px solid #ffbf47;
+        outline-offset: 3px;
+      }
+
+      summary:active {
+        outline: 3px solid #ffbf47;
+        outline-offset: 3px;
+      }
+
+      /* --------------------------
+       HOVER REMOVAL ON SMALL SCREENS
+    ---------------------------*/
+      @media (max-width: 600px) {
+        .remove-hover-small:hover {
+          background: inherit !important;
+          text-decoration: underline !important;
+        }
+      }
+
+      /* --------------------------
+       HOVER REMOVAL ON NO-HOVER DEVICES
+    ---------------------------*/
+      @media (hover: none) {
+        .remove-hover-media:hover {
+          background: inherit !important;
+          text-decoration: underline !important;
+        }
+      }
+
+      /* Section styling (unchanged) */
+      section {
+        margin-bottom: 32px;
+        padding: 20px;
+        border: 2px solid #ccc;
+        border-radius: 6px;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Refactored Media Hover Test</h1>
+
+    <!-- SECTION 1 ----------------------------------------------------------->
+    <section>
+      <h2>Section 1: Links</h2>
+
+      <p><strong>1. Simple link:</strong></p>
+      <a href="#">Simple Link</a>
+
+      <p><strong>2. Link with hover removed on small screens:</strong></p>
+      <a href="#" class="remove-hover-small">Hover Removed on Small Screens</a>
+
+      <p><strong>3. Link with hover removed for @media(hover:none):</strong></p>
+      <a href="#" class="remove-hover-media"
+        >Hover Removed for No-Hover Devices</a
+      >
+    </section>
+
+    <!-- SECTION 2 ----------------------------------------------------------->
+    <section>
+      <h2>Section 2: Buttons</h2>
+
+      <p><strong>1. Simple button:</strong></p>
+      <button type="button">Simple Button</button>
+
+      <p><strong>2. Button with hover removed on small screens:</strong></p>
+      <button type="button" class="remove-hover-small">
+        Button – No Hover on Small Screens
+      </button>
+
+      <p>
+        <strong>3. Button with hover removed for @media(hover:none):</strong>
+      </p>
+      <button type="button" class="remove-hover-media">
+        Button – No Hover on No-Hover Devices
+      </button>
+    </section>
+
+    <!-- SECTION 3 ----------------------------------------------------------->
+    <section>
+      <h2>Section 3: Accordions</h2>
+
+      <p><strong>1. Simple accordion:</strong></p>
+      <details>
+        <summary>Simple Accordion</summary>
+        <p>Content for the simple accordion.</p>
+      </details>
+
+      <p><strong>2. Accordion with hover removed on small screens:</strong></p>
+      <details class="remove-hover-small">
+        <summary>Accordion – No Hover on Small Screens</summary>
+        <p>Content for this accordion.</p>
+      </details>
+
+      <p>
+        <strong>3. Accordion with hover removed for @media(hover:none):</strong>
+      </p>
+      <details class="remove-hover-media">
+        <summary>Accordion – No Hover on No-Hover Devices</summary>
+        <p>Content for this accordion.</p>
+      </details>
+    </section>
+  </body>
+</html>
