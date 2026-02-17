@@ -36,10 +36,10 @@
         background-color: #ce8a0d;
       }
 
-      /* a:active {
+      a:active {
         outline: 3px solid #ce8a0d;
         outline-offset: 3px;
-      } */
+      }
 
       /* --------------------------
        HOVER REMOVAL ON SMALL SCREENS
@@ -47,6 +47,9 @@
       @media (max-width: 768px) {
         .remove-hover-small:hover {
           text-decoration: underline !important;
+        }
+        a:active {
+          outline: none;
         }
       }
 
@@ -57,6 +60,14 @@
         .remove-hover-media:hover {
           text-decoration: underline !important;
         }
+        a:active {
+          outline: none;
+        }
+      }
+
+      /* iOS + Android webkit browsers tap colour */
+      * {
+        -webkit-tap-highlight-color: #70c0d4; /* custom highlight */
       }
     </style>
   </head>
