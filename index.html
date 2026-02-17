@@ -34,37 +34,11 @@
         outline-offset: 3px;
       }
 
-      button {
-        font-size: 1rem;
-        padding: 10px 16px;
-        margin: 6px 0;
-        border-radius: 4px;
-        border: 2px solid #004085;
-        background: #0069d9;
-        color: #fff;
-        cursor: pointer;
-      }
-
-      button:hover {
-        background: #0053aa;
-      }
-
-      button:focus {
-        outline: 3px solid #000000;
-        outline-offset: 3px;
-      }
-
-      button:active {
-        outline: 3px solid #ffbf47;
-        outline-offset: 3px;
-      }
-
       /* --------------------------
        HOVER REMOVAL ON SMALL SCREENS
     ---------------------------*/
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         .remove-hover-small:hover {
-          background: inherit !important;
           text-decoration: underline !important;
         }
       }
@@ -74,18 +48,8 @@
     ---------------------------*/
       @media (hover: none) {
         .remove-hover-media:hover {
-          background: inherit !important;
           text-decoration: underline !important;
         }
-      }
-
-      /* Section styling (unchanged) */
-      section {
-        margin-bottom: 32px;
-        padding: 20px;
-        border: 2px solid #ccc;
-        border-radius: 6px;
-        background: #fafafa;
       }
     </style>
   </head>
@@ -95,38 +59,75 @@
 
     <!-- SECTION 1 ----------------------------------------------------------->
     <section>
-      <h2>Section 1: Links</h2>
-
-      <p><strong>1. Simple link:</strong></p>
-      <a href="#">Simple Link</a>
-
-      <p><strong>2. Link with hover removed on small screens:</strong></p>
-      <a href="#" class="remove-hover-small">Hover Removed on Small Screens</a>
-
-      <p><strong>3. Link with hover removed for @media(hover:none):</strong></p>
-      <a href="#" class="remove-hover-media"
-        >Hover Removed for No-Hover Devices</a
-      >
+      <h2>Section 1: Simple Links</h2>
+      <p><a href="#">Simple Link 1</a></p>
+      <p><a href="#">Simple Link 2</a></p>
+      <p><a href="#">Simple Link 3</a></p>
+      <p><a href="#">Simple Link 4</a></p>
+      <p><a href="#">Simple Link 5</a></p>
     </section>
-
-    <!-- SECTION 2 ----------------------------------------------------------->
     <section>
-      <h2>Section 2: Buttons</h2>
-
-      <p><strong>1. Simple button:</strong></p>
-      <button type="button">Simple Button</button>
-
-      <p><strong>2. Button with hover removed on small screens:</strong></p>
-      <button type="button" class="remove-hover-small">
-        Button – No Hover on Small Screens
-      </button>
+      <h2>Section 2: Link with hover removed on small screens</h2>
 
       <p>
-        <strong>3. Button with hover removed for @media(hover:none):</strong>
+        <a href="#" class="remove-hover-small"
+          >1 Hover Removed on Small Screens
+        </a>
       </p>
-      <button type="button" class="remove-hover-media">
-        Button – No Hover on No-Hover Devices
-      </button>
+      <p>
+        <a href="#" class="remove-hover-small"
+          >2 Hover Removed on Small Screens</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-small"
+          >3 Hover Removed on Small Screens</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-small"
+          >4 Hover Removed on Small Screens</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-small"
+          >5Hover Removed on Small Screens</a
+        >
+      </p>
+    </section>
+    <section>
+      <h2>Section 3: Link with hover removed for @media(hover:none):</h2>
+
+      <p>
+        <a href="#" class="remove-hover-media"
+          >1 Hover Removed for No-Hover Devices</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-media"
+          >2 Hover Removed for No-Hover Devices</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-media"
+          >3 Hover Removed for No-Hover Devices</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-media"
+          >4 Hover Removed for No-Hover Devices</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-media"
+          >5 Hover Removed for No-Hover Devices</a
+        >
+      </p>
+      <p>
+        <a href="#" class="remove-hover-media"
+          >6 Hover Removed for No-Hover Devices</a
+        >
+      </p>
     </section>
   </body>
 </html>
