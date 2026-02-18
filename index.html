@@ -27,8 +27,16 @@
         text-underline-offset: 2px;
       }
 
+      a.no-underline {
+        text-decoration: none;
+      }
+
       a:hover {
         text-decoration: none;
+      }
+
+      a.no-underline:hover {
+        text-decoration: underline;
       }
 
       a:visited {
@@ -63,6 +71,10 @@
         a:active {
           outline: none;
         }
+
+        a.no-underline:hover {
+          text-decoration: none;
+        }
       }
 
       /* iOS + Android webkit browsers tap colour */
@@ -79,12 +91,20 @@
     </section>
     <!-- SECTION 1 ----------------------------------------------------------->
     <section>
-      <h2>Section 1: Simple Links</h2>
+      <h2>Section 1.1: Simple Links (styled with underline)</h2>
       <p><a href="#top">Simple Link 1</a></p>
       <p><a href="#top">Simple Link 2</a></p>
       <p><a href="#top">Simple Link 3</a></p>
       <p><a href="#top">Simple Link 4</a></p>
       <p><a href="#top">Simple Link 5</a></p>
+    </section>
+    <section>
+      <h2>Section 1.2: Simple Links (styled w/o underline)</h2>
+      <p><a class="no-underline" href="#top">Simple Link 1</a></p>
+      <p><a class="no-underline" href="#top">Simple Link 2</a></p>
+      <p><a class="no-underline" href="#top">Simple Link 3</a></p>
+      <p><a class="no-underline" href="#top">Simple Link 4</a></p>
+      <p><a class="no-underline" href="#top">Simple Link 5</a></p>
     </section>
     <section>
       <h2>Section 2: Link with hover removed on small screens</h2>
